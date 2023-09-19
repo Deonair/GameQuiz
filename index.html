@@ -1,0 +1,137 @@
+<!-- In dit bestand staat de HTML-code voor je Quiz. Je kunt deze code aanpassen. -->
+
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz Development 1 - Standaardtemplate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+            <h1>Game Quiz</h1>
+        </header>
+
+        <main>
+            <div class="page" id="page-landing">
+                <h2>Welkom bij de game quiz!</h2>
+                <!-- <p>Speel de quiz en test je kennis over HTML, CSS en JavaScript!</p> -->
+                <img src="img/controller.gif" alt="controller"><br>
+                <button id="button-start">Start</button><br>
+                <button id="button-leaderboard">Leaderboard</button><br>
+                <a class="documentation-link" href="documentation/" id="button-rood">Documentatie</a>
+
+            </div>
+            <div class="page" id="page-start">
+                <p class="introtext">Dit is een Quiz over games. Er zijn 10 vragen.<br> Veel plezier met het spelen van de quiz</p>
+
+
+                <button id="button-questions">Next</button><br>
+            </div>
+            <div class="page" id="page-questions">
+
+                <div class="container">
+
+                    <div id="hud">
+                        <div id="hud-item">
+                            <p class="hud-prefix">
+                                Vraag
+                            </p>
+                            <p class="hud-main-text" id="questionCounter"></p>
+                        </div>
+                        <div id="hud-item2">
+                            <p class="hud-prefix">
+                                Score
+                            </p>
+                            <p class="hud-main-text" id="score">
+                                0
+                            </p>
+                        </div>
+                    </div>
+                    <p id="Snaam"></p>
+                    <div id="game" class="justify-center flex-column">
+                        <h2 id="question">?</h2>
+                        <img id="afbeelding" src="img/" alt="nitpicking">
+                        <p id="realAnswer"></p>
+                        <div class="keuze-container">
+
+                            <p class="keuze-text" data-number="1">Keuze 1</p>
+                        </div>
+                        <div class="keuze-container">
+
+                            <p class="keuze-text" data-number="2">Keuze 2</p>
+                        </div>
+                        <div class="keuze-container">
+
+                            <p class="keuze-text" data-number="3">Keuze 3</p>
+                        </div>
+                        <div class="keuze-container">
+
+                            <p class="keuze-text" data-number="4">Keuze 4</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="page" id="page-end">
+                <div class="container">
+                    <h2>Score</h2>
+                    <h2 id="finalScore">?</h2>
+                    <p id="scorefeedback">?</p>
+
+                    <button id="button-end">END</button><br>
+
+                    <button onClick="window.location.reload();">Start Opnieuw </button>
+
+                </div>
+
+            </div>
+
+            <div class="page" id="page-leaderboard">
+                <p>Leaderboard</p>
+                <table class="center">
+                    <tr>
+                        <th>Naam</th>
+                        <th>Score</th>
+                    </tr>
+                    <tr>
+                        <td>Gökdeniz</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Eric</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Debo</td>
+                        <td>0</td>
+                    </tr>
+
+                </table><br>
+                <button id="button-landing">Naar Begin</button><br>
+                <!-- <button id="button-landing">Landing</button><br> -->
+                <button id="button-login"></button><br>
+
+            </div>
+            <div class="page" id="page-login">
+                <h1>Login</h1>
+                <input type="text" placeholder="Studentnummer" id="snummer" autocomplete="off"><br>
+                <p id="error"></p>
+                <button id="studentlogin">Login</button><br>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="js/quiz.js"></script>
+    <script src="js/spel.js"></script>
+</body>
+
+</html>

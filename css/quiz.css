@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Plaats je CSS-code in dit bestand */
+
+body {
+    background-color: #121212;
+    text-align: center;
+}
+
+main {
+    grid-area: main;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.grid-container {
+    grid-template-areas: 'header header' 'nav main';
+    grid-gap: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    font-weight: bold;
+    background-color: #303796;
+    /* button */
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+button:hover {
+    background-color: #11244e;
+}
+
+#button-start {
+    font-weight: bold;
+    background-color: #007900;
+    /* Green */
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 16px 38px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 10px;
+}
+
+#button-start:hover {
+    background-color: #042c00;
+}
+
+#button-rood {
+    font-weight: bold;
+    background-color: #C40000;
+    /* red */
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+#button-questions {
+    font-weight: bold;
+    background-color: #303796;
+    /* Green */
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+#button-questions:hover {
+    background-color: #11244e;
+}
+
+#button-end {
+    font-weight: bold;
+    background-color: #ff00d4;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+#button-end:hover {
+    background-color: #ff00d4;
+}
+
+#snummer {
+    width: "20%";
+    height: "4%";
+}
+
+#button-leaderboard {
+    font-weight: bold;
+    background-color: #F8DD01;
+    /* Yellow */
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+#scorefeedback {
+    color: white;
+}
+
+#button-leaderboard:hover {
+    background-color: #D98B1E;
+}
+
+h1 {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h2 {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+p {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+img {
+    height: 300px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+/* Login */
+
+#snummer {
+    height: 300%;
+    width: 40%;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+}
+
+
+/* GameUitleg */
+
+.introtext {
+    border: white;
+    border-style: double;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* Vragen/amtwoorden */
+
+.keuze-container {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 12px;
+    border: 5px solid white;
+    background-color: black;
+    text-align: center;
+}
+
+.keuze-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.keuze-text {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+
+/* Scoren/vraag bijhouden */
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+}
+
+.hud-main-text {
+    text-align: center;
+    color: white;
+}
+
+
+/* Leaderboard */
+
+table {
+    border: double white 1em;
+    position: relative;
+    float: left;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th,
+td {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    font-size: 100%;
+}
+
+
+/* Documentation */
+
+.testscript {
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+.testscript th,
+.testscript td {
+    border: 1px solid #FFF;
+    vertical-align: top;
+    padding: 5px 10px 5px 10px;
+    color: white;
+}
+
+.testscript ul {
+    margin: 0;
+}
+
+.testscript li,
+.testscript span {
+    margin: 8px 0;
+}
+
+.testscript span {
+    display: block;
+    margin: 8px 0;
+}
+
+.documentation-link {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+ul {
+    display: block;
+}
